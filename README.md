@@ -2,6 +2,8 @@
 
 > The same approach without WSL works on MacOS
 
+> _Refer to the [Appendix](#appendix) section for detailed installation and setup instructions for WSL, Docker, Homebrew, and more._
+
 ## Introduction
 `Pipenv` is a tool for managing Python dependencies, virtual environments, and packaging. It is an alternative to `virtualenv` and `venv`, offering a streamlined experience.
 
@@ -272,6 +274,8 @@ docker run hello-world
 ```
 If successful, this confirms Docker Desktop is accessible from Kali Linux WSL.
 
-# Read More...
-> [here](more....md)
+<br/>
+<br/>
+
+# Refer to execution logs to troubleshoot [here...](more....md)
 
