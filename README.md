@@ -1,4 +1,4 @@
-# Comprehensive Guide to Pipenv, Pyenv, and Docker in WSL on Win 11/10
+# Guide to Pipenv, Pyenv, and Docker in MacOS / WSL on Win 11/10
 
 > The same approach without WSL works on MacOS
 
@@ -16,9 +16,27 @@ sudo apt install pipenv
 ### Creating a Pipenv Environment
 To initialize a new environment and install dependencies:
 ```bash
+pipenv --python 3.11.9
 pipenv install fastapi
 ```
 This will create a `Pipfile` and `Pipfile.lock`, managing dependencies.
+
+### Additional Package Management in Pipenv
+#### Installing Specific Packages with Categories
+```bash
+pipenv install requests==1.2 --categories="for-Test for-Packaging"
+pipenv install numpy --categories="for-ML"
+```
+
+#### Viewing Installed Packages
+```bash
+pipenv graph
+```
+
+#### Uninstalling a Package
+```bash
+pipenv uninstall requests --categories="for-Test"
+```
 
 ### Application Structure
 #### `src/app.py`
@@ -55,36 +73,19 @@ python_full_version = "3.11.9"
 [for-test]
 uvicorn = "*"
 flask = "*"
+requests = "1.2"
 
 [for-packaging]
 uvicorn = "*"
 fastapi = "*"
+
+[for-ML]
+numpy = "*"
 ```
 
-### Using Pipenv
-#### Activating the Virtual Environment
-```bash
-pipenv shell
-```
-
-#### Installing Dependencies
-```bash
-pipenv install --dev
-```
-
-#### Running the Application
+### Running the Application
 ```bash
 pipenv run uvicorn src.app:app --reload
-```
-
-#### Checking Installed Packages
-```bash
-pipenv graph
-```
-
-#### Uninstalling a Package
-```bash
-pipenv uninstall flask --categories="for-packaging"
 ```
 
 ---
@@ -214,9 +215,8 @@ wsl
 ```
 
 ### Configuring Homebrew (Linux)
-After installation, follow the on-screen instructions to add Homebrew to your system’s PATH. Typically, this involves running:
 ```bash
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+echo 'eval "$('/home/linuxbrew/.linuxbrew/bin/brew shellenv')"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -231,9 +231,8 @@ brew --version
 ```
 
 ### Configuring Homebrew (MacOS)
-After installation, run the following command:
 ```bash
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
+echo 'eval "$('/opt/homebrew/bin/brew shellenv')"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -244,38 +243,29 @@ brew --version
 
 ## C) Accessing Docker Desktop from Kali Linux WSL
 
-If you have Docker Desktop installed on your Windows machine and want to access it from Kali Linux WSL, follow these steps:
-
-### 1. Enable WSL Integration in Docker Desktop
-- Open Docker Desktop on Windows.
-- Go to **Settings > Resources > WSL Integration**.
-- Enable integration for **Kali Linux**.
-
-### 2. Check Docker Connection
-In Kali Linux WSL, verify Docker is running:
+### Enable WSL Integration in Docker Desktop
 ```bash
 docker version
 ```
 If the client connects successfully, it should display version details.
 
-### 3. Set Environment Variable for Docker
+### Setting Environment Variable for Docker
 ```bash
 export DOCKER_HOST=tcp://localhost:2375
 ```
-To make this permanent, add it to your `~/.bashrc` or `~/.zshrc`:
+To make this permanent, add it to your `~/.bashrc`:
 ```bash
 echo 'export DOCKER_HOST=tcp://localhost:2375' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### 4. Test a Docker Container
+### Running a Test Docker Container
 ```bash
 docker run hello-world
 ```
-If successful, this confirms Docker Desktop is accessible from Kali Linux WSL.
 
 <br/>
-<br/>
 
-# Refer to execution logs to troubleshoot [here...](more....md)
+# Refer
+> To execution logs for troubleshoot help [here...](more....md)
 
