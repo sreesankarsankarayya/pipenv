@@ -177,7 +177,7 @@ kex --win -s
 # Appendix
 
 ## A) Setting up WSL 
->_[back to top](#guide)_
+>_[back to top](#guide-to-pipenv-pyenv-and-docker-in-macos--wsl-on-win-1110)_
 
 ### Installing WSL
 ```bash
@@ -244,7 +244,7 @@ brew --version
 ```
 
 ## C) Accessing Docker Desktop from Kali Linux WSL 
->_[back to top](#Guide)_
+>_[back to top](#guide-to-pipenv-pyenv-and-docker-in-macos--wsl-on-win-1110)_
 
 ### Enable WSL Integration in Docker Desktop
 ```bash
