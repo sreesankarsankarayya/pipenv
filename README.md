@@ -177,7 +177,7 @@ kex --win -s
 # Appendix
 
 ## A) Setting up WSL 
->_[back to top](#Guide)_
+>_[back to top](#guide)_
 
 ### Installing WSL
 ```bash
@@ -209,7 +209,7 @@ wsl
 ```
 
 ## B) Setting up Homebrew 
->_[back to top](#Guide)_
+>_[back to top](#guide-to-pipenv-pyenv-and-docker-in-macos--wsl-on-win-1110)_
 
 ### Installing Homebrew (Linux)
 ```bash
