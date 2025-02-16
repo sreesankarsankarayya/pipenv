@@ -1,4 +1,6 @@
-# Comprehensive Guide to Pipenv, Pyenv, and Docker in Kali Linux
+# Comprehensive Guide to Pipenv, Pyenv, and Docker in Kali Linux WSL on Win 11/10
+
+> The same approach without WSL works on MacOS
 
 ## Introduction
 `Pipenv` is a tool for managing Python dependencies, virtual environments, and packaging. It is an alternative to `virtualenv` and `venv`, offering a streamlined experience.
@@ -270,6 +272,6 @@ docker run hello-world
 ```
 If successful, this confirms Docker Desktop is accessible from Kali Linux WSL.
 
-
-# Read More... 
+# Read More...
 > [here](more....md)
+
