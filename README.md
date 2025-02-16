@@ -176,7 +176,8 @@ kex --win -s
 
 # Appendix
 
-## A) Setting up WSL
+## A) Setting up WSL 
+>_[back to top](#Guide)_
 
 ### Installing WSL
 ```bash
@@ -207,7 +208,8 @@ wsl --update
 wsl
 ```
 
-## B) Setting up Homebrew
+## B) Setting up Homebrew 
+>_[back to top](#Guide)_
 
 ### Installing Homebrew (Linux)
 ```bash
@@ -241,7 +243,8 @@ source ~/.zshrc
 brew --version
 ```
 
-## C) Accessing Docker Desktop from Kali Linux WSL
+## C) Accessing Docker Desktop from Kali Linux WSL 
+>_[back to top](#Guide)_
 
 ### Enable WSL Integration in Docker Desktop
 ```bash
