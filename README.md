@@ -1,4 +1,4 @@
-# Comprehensive Guide to Pipenv, Pyenv, and Docker in Kali Linux WSL on Win 11/10
+# Comprehensive Guide to Pipenv, Pyenv, and Docker in WSL on Win 11/10
 
 > The same approach without WSL works on MacOS
 
